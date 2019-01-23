@@ -1,6 +1,7 @@
-import json
-
+# Opting to separately declare and append values to data like a dict
+# over initializing the whole object in one long super-brace
 data = {}
+
 data['Aasimar'] = {
     'base_ab_mod': {
         'Charisma': 2
@@ -8,8 +9,8 @@ data['Aasimar'] = {
     'lifespan': '160',
     'size': {
         'tier': 'Medium',
-        'h': (56, '2d10'),
-        'w': (110, '2d4')
+        'height': (56, '2d10'),
+        'weight': (110, '2d4')
     },
     'speed': {
         'standard': 30,
@@ -44,16 +45,15 @@ data['Bugbear'] = {
     'lifespan': '80',
     'size': {
         'tier': 'Medium',
-        'h': (72, '2d12'),
-        'w': (200, '2d6')
+        'height': (72, '2d12'),
+        'weight': (200, '2d6')
     },
     'speed': {
         'standard': 30,
         'climbing': None,
         'flying': None,
         'swimming': None
-    },
-    'subrace': {}
+    }
 }
 
 data['Dragonborn'] = {
@@ -64,16 +64,15 @@ data['Dragonborn'] = {
     'lifespan': '80',
     'size': {
         'tier': 'Medium',
-        'h': (66, '2d8'),
-        'w': (175, '2d6')
+        'height': (66, '2d8'),
+        'weight': (175, '2d6')
     },
     'speed': {
         'standard': 30,
         'climbing': None,
         'flying': None,
         'swimming': None
-    },
-    'subrace': {}
+    }
 }
 
 data['Dwarf'] = {
@@ -96,8 +95,8 @@ data['Dwarf'] = {
                 'Strength': 1
             },
             'size': {
-                'h': (48, '2d6'),   # Fabricated, PHB says 'between' 4-5
-                'w': (140, '2d10')  # Fabricated, PHB says 'around' 150
+                'height': (48, '2d6'),   # Fabricated, PHB says 'between' 4-5
+                'weight': (140, '2d10')  # Fabricated, PHB says 'around' 150
             }
         },
         'Hill': {
@@ -105,8 +104,8 @@ data['Dwarf'] = {
                 'Wisdom': 1
             },
             'size': {
-                'h': (44, '2d4'),
-                'w': (115, '2d6')
+                'height': (44, '2d4'),
+                'weight': (115, '2d6')
             }
         },
         'Mountain': {
@@ -114,8 +113,8 @@ data['Dwarf'] = {
                 'Strength': 2
             },
             'size': {
-                'h': (48, '2d4'),
-                'w': (130, '2d6')
+                'height': (48, '2d4'),
+                'weight': (130, '2d6')
             }
         }
     }
@@ -141,8 +140,8 @@ data['Elf'] = {
                 'Charisma': 1
             },
             'size': {
-                'h': (53, '2d6'),
-                'w': (75, '1d6')
+                'height': (53, '2d6'),
+                'weight': (75, '1d6')
             }
         },
         'Eladrin': {
@@ -150,8 +149,8 @@ data['Elf'] = {
                 'Charisma': 1
             },
             'size': {
-                'h': (54, '2d12'),
-                'w': (90, '1d4')
+                'height': (54, '2d12'),
+                'weight': (90, '1d4')
             }
         },
         'High': {
@@ -159,8 +158,8 @@ data['Elf'] = {
                 'Intelligence': 1
             },
             'size': {
-                'h': (54, '2d10'),
-                'w': (90, '1d4')
+                'height': (54, '2d10'),
+                'weight': (90, '1d4')
             }
         },
         'Sea': {
@@ -168,20 +167,20 @@ data['Elf'] = {
                 'Constitution': 1
             },
             'size': {
-                'h': (54, '2d8'),
-                'w': (90, '1d4')
+                'height': (54, '2d8'),
+                'weight': (90, '1d4')
             },
             'speed': {
                 'swimming': 30
             }
         },
-        'Shadar-kai': {
+        'Shadar-Kai': {
             'ab_mod': {
                 'Constitution': 1
             },
             'size': {
-                'h': (56, '2d8'),
-                'w': (90, '1d4')
+                'height': (56, '2d8'),
+                'weight': (90, '1d4')
             }
         },
         'Wood': {
@@ -189,8 +188,8 @@ data['Elf'] = {
                 'Wisdom': 1
             },
             'size': {
-                'h': (56, '2d8'),
-                'w': (90, '1d4')
+                'height': (56, '2d8'),
+                'weight': (90, '1d4')
             },
             'speed': {
                 'standard': 35
@@ -207,16 +206,15 @@ data['Firbolg'] = {
     'lifespan': '500',
     'size': {
         'tier': 'Medium',
-        'h': (74, '2d12'),
-        'w': (175, '2d6')
+        'height': (74, '2d12'),
+        'weight': (175, '2d6')
     },
     'speed': {
         'standard': 30,
         'climbing': None,
         'flying': None,
         'swimming': None
-    },
-    'subrace': {}
+    }
 }
 
 data['Genasi'] = {
@@ -226,8 +224,8 @@ data['Genasi'] = {
     'lifespan': '120',
     'size': {
         'tier': 'Medium',
-        'h': (56, '2d10'),
-        'w': (110, '2d4')
+        'height': (56, '2d10'),
+        'weight': (110, '2d4')
     },
     'speed': {
         'standard': 30,
@@ -282,8 +280,8 @@ data['Gith'] = {
                 'Strength': 2
             },
             'size': {
-                'h': (60, '2d12'),
-                'w': (100, '2d4')
+                'height': (60, '2d12'),
+                'weight': (100, '2d4')
             }
         },
         'Githzerai': {
@@ -291,8 +289,8 @@ data['Gith'] = {
                 'Wisdom': 2
             },
             'size': {
-                'h': (59, '2d12'),
-                'w': (90, '1d4')
+                'height': (59, '2d12'),
+                'weight': (90, '1d4')
             }
         }
     }
@@ -305,8 +303,8 @@ data['Gnome'] = {
     'lifespan': '350:500',
     'size': {
         'tier': 'Small',
-        'h': (35, '2d4'),
-        'w': (35, '1')
+        'height': (35, '2d4'),
+        'weight': (35, None)
     },
     'speed': {
         'standard': 25,
@@ -334,16 +332,278 @@ data['Gnome'] = {
     }
 }
 
-"""A template for new races
-data['Name'] = {
+data['Goblin'] = {
     'base_ab_mod': {
-        'Ab': 0
+        'Dexterity': 2,
+        'Constitution': 1
     },
-    'lifespan': ,
+    'lifespan': 60,
+    'size': {
+        'tier': 'Small',
+        'height': (41, '2d4'),
+        'weight': (35, None)
+    },
+    'speed': {
+        'standard': 30,
+        'climbing': None,
+        'flying': None,
+        'swimming': None
+    }
+}
+
+data['Half-Elf'] = {
+    'base_ab_mod': {
+        'Charisma': 2,
+        'Choice1': 1,
+        'Choice2': 1
+    },
+    'lifespan': 180,
     'size': {
         'tier': 'Medium',
-        'h': (56, '2d10'),
-        'w': (110, '2d4')
+        'height': (56, '2d10'),
+        'weight': (110, '2d4')
+    },
+    'speed': {
+        'standard': 30,
+        'climbing': None,
+        'flying': None,
+        'swimming': None
+    },
+    'variant': {
+        'Aquatic Elf Heritage': {
+            'speed': {
+                'swimming': 30
+            }
+        },
+        'Drow Heritage': {
+        },
+        'High Elf Heritage': {
+        },
+        'Wood Elf Heritage': {
+        }
+    }
+}
+
+data['Half-Orc'] = {
+    'base_ab_mod': {
+        'Strength': 2,
+        'Constitution': 1
+    },
+    'lifespan': 75,
+    'size': {
+        'tier': 'Medium',
+        'height': (58, '2d10'),
+        'weight': (140, '2d6')
+    },
+    'speed': {
+        'standard': 30,
+        'climbing': None,
+        'flying': None,
+        'swimming': None
+    },
+    'variant': {
+        'Aquatic Elf Heritage': {
+            'speed': {
+                'swimming': 30
+            }
+        },
+        'Drow Heritage': {
+        },
+        'High Elf Heritage': {
+        },
+        'Wood Elf Heritage': {
+        }
+    }
+}
+
+data['Halfling'] = {
+    'base_ab_mod': {
+        'Dexterity': 2
+    },
+    'lifespan': '150',
+    'size': {
+        'tier': 'Small',
+        'height': (31, '2d4'),
+        'weight': (35, None)
+    },
+    'speed': {
+        'standard': 25,
+        'climbing': None,
+        'flying': None,
+        'swimming': None
+    },
+    'subrace': {
+        'Ghostwise': {
+            'ab_mod': {
+                'Wisdom': 1
+            }
+        },
+        'Lightfoot': {
+            'ab_mod': {
+                'Charisma': 1
+            }
+        },
+        'Stout': {
+            'ab_mod': {
+                'Constitution': 1
+            }
+        }
+    }
+}
+
+data['Hobgoblin'] = {
+    'base_ab_mod': {
+        'Constitution': 2,
+        'Intelligence': 1
+    },
+    'lifespan': 100,
+    'size': {
+        'tier': 'Medium',
+        'height': (56, '2d10'),
+        'weight': (110, '2d4')
+    },
+    'speed': {
+        'standard': 30,
+        'climbing': None,
+        'flying': None,
+        'swimming': None
+    }
+}
+
+data['Human'] = {
+    'base_ab_mod': {
+        'Strength': 1,
+        'Dexterity': 1,
+        'Constitution': 1,
+        'Intelligence': 1,
+        'Wisdom': 1,
+        'Charisma': 1
+    },
+    'lifespan': 100,
+    'size': {
+        'tier': 'Medium',
+        'height': (56, '2d10'),
+        'weight': (110, '2d4')
+    },
+    'speed': {
+        'standard': 30,
+        'climbing': None,
+        'flying': None,
+        'swimming': None
+    },
+    'variant': {
+        'Variant': {
+            'ab_mod': {
+                'Choice1': 1,
+                'Choice2': 1
+            }
+        }
+    }
+}
+
+data['Kenku'] = {
+    'base_ab_mod': {
+        'Dexterity': 2,
+        'Wisdom': 1
+    },
+    'lifespan': 60,
+    'size': {
+        'tier': 'Medium',
+        'height': (52, '2d8'),
+        'weight': (50, '1d6')
+    },
+    'speed': {
+        'standard': 30,
+        'climbing': None,
+        'flying': None,
+        'swimming': None
+    }
+}
+
+data['Kobold'] = {
+    'base_ab_mod': {
+        'Strength': 2,
+        'Dexterity': 2
+    },
+    'lifespan': 120,
+    'size': {
+        'tier': 'Small',
+        'height': (25, '2d4'),
+        'weight': (25, None)
+    },
+    'speed': {
+        'standard': 30,
+        'climbing': None,
+        'flying': None,
+        'swimming': None
+    },
+}
+
+data['Lizardfolk'] = {
+    'base_ab_mod': {
+        'Constitution': 2,
+        'Wisdom': 1
+    },
+    'lifespan': 60,
+    'size': {
+        'tier': 'Medium',
+        'height': (57, '2d10'),
+        'weight': (120, '2d6')
+    },
+    'speed': {
+        'standard': 30,
+        'climbing': None,
+        'flying': None,
+        'swimming': 30
+    },
+}
+
+data['Orc'] = {
+    'base_ab_mod': {
+        'Strength': 2,
+        'Constitution': 1,
+        'Intelligence': 2
+    },
+    'lifespan': 50,
+    'size': {
+        'tier': 'Medium',
+        'height': (52, '2d8'),
+        'weight': (175, '2d6')
+    },
+    'speed': {
+        'standard': 30,
+        'climbing': None,
+        'flying': None,
+        'swimming': None
+    },
+}
+
+data['Tabaxi'] = {
+    'base_ab_mod': {
+        'Dexterity': 2,
+        'Charisma': 1
+    },
+    'lifespan': 100,
+    'size': {
+        'tier': 'Medium',
+        'height': (58, '2d10'),
+        'weight': (90, '2d4')
+    },
+    'speed': {
+        'standard': 30,
+        'climbing': None,
+        'flying': None,
+        'swimming': None
+    },
+}
+
+data['Tiefling'] = {
+    'base_ab_mod': {},
+    'lifespan': 105,  # Fabricated, PHB says 'human-like... few [more]'
+    'size': {
+        'tier': 'Medium',
+        'height': (56, '2d10'),
+        'weight': (110, '2d4')
     },
     'speed': {
         'standard': 30,
@@ -352,9 +612,132 @@ data['Name'] = {
         'swimming': None
     },
     'subrace': {
-        'Subrace': {
-            'stuff': 'stuff'
+        'Asmodeus': {
+            'ab_mod': {
+                'Intelligence': 1,
+                'Charisma': 2
+            }
+        },
+        'Baalzebul': {
+            'ab_mod': {
+                'Intelligence': 1,
+                'Charisma': 2
+            }
+        },
+        'Dispater': {
+            'ab_mod': {
+                'Dexterity': 1,
+                'Charisma': 2
+            }
+        },
+        'Fierna': {
+            'ab_mod': {
+                'Wisdom': 1,
+                'Charisma': 2
+            }
+        },
+        'Glasya': {
+            'ab_mod': {
+                'Dexterity': 1,
+                'Charisma': 2
+            }
+        },
+        'Levistus': {
+            'ab_mod': {
+                'Constitution': 1,
+                'Charisma': 2
+            }
+        },
+        'Mammon': {
+            'ab_mod': {
+                'Intelligence': 1,
+                'Charisma': 2
+            }
+        },
+        'Mephistopheles': {
+            'ab_mod': {
+                'Intelligence': 1,
+                'Charisma': 2
+            }
+        },
+        'Zariel': {
+            'ab_mod': {
+                'Strength': 1,
+                'Charisma': 2
+            }
+        },
+    },
+    'variant1': {
+        'Feral': {
+            'ab_mod': {
+                'Dexterity': 2,
+                'Intelligence': 1
+            }
+        }
+    },
+    'variant2': {
+        'Winged': {
+            'speed': {
+                'flying': 30
+            }
         }
     }
 }
-"""
+
+data['Tortle'] = {
+    'base_ab_mod': {
+        'Strength': 2,
+        'Wisdom': 1
+    },
+    'lifespan': 50,
+    'size': {
+        'tier': 'Medium',
+        'height': (60, '2d6'),   # Fabricated, ToA says '5 to 6'
+        'weight': (430, '2d20')  # Fabricated, ToA says 'average 450'
+    },
+    'speed': {
+        'standard': 30,
+        'climbing': None,
+        'flying': None,
+        'swimming': None
+    },
+}
+
+data['Triton'] = {
+    'base_ab_mod': {
+        'Strength': 1,
+        'Constitution': 1,
+        'Charisma': 1
+    },
+    'lifespan': 200,
+    'size': {
+        'tier': 'Medium',
+        'height': (54, '2d10'),
+        'weight': (90, '2d4')
+    },
+    'speed': {
+        'standard': 30,
+        'climbing': None,
+        'flying': None,
+        'swimming': 30
+    },
+}
+
+data['Yuan-Ti Pureblood'] = {
+    'base_ab_mod': {
+        'Intelligence': 1,
+        'Charisma': 2
+    },
+    'lifespan': 100,
+    'size': {
+        'tier': 'Medium',
+        'height': (56, '2d10'),
+        'weight': (110, '2d4')
+    },
+    'speed': {
+        'standard': 30,
+        'climbing': None,
+        'flying': None,
+        'swimming': 30
+    },
+}
