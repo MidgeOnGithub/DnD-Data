@@ -95,8 +95,8 @@ data['Dwarf'] = {
                 'Strength': 1
             },
             'size': {
-                'height': (48, '2d6'),   # Fabricated, PHB says 'between' 4-5
-                'weight': (140, '2d10')  # Fabricated, PHB says 'around' 150
+                'height': (48, '2d6'),   # Fabricated, PHB: 'between' 4-5
+                'weight': (140, '2d10')  # Fabricated, PHB: 'around' 150
             }
         },
         'Hill': {
@@ -337,7 +337,7 @@ data['Goblin'] = {
         'Dexterity': 2,
         'Constitution': 1
     },
-    'lifespan': 60,
+    'lifespan': '60',
     'size': {
         'tier': 'Small',
         'height': (41, '2d4'),
@@ -357,7 +357,7 @@ data['Half-Elf'] = {
         'Choice1': 1,
         'Choice2': 1
     },
-    'lifespan': 180,
+    'lifespan': '180',
     'size': {
         'tier': 'Medium',
         'height': (56, '2d10'),
@@ -389,7 +389,7 @@ data['Half-Orc'] = {
         'Strength': 2,
         'Constitution': 1
     },
-    'lifespan': 75,
+    'lifespan': '75',
     'size': {
         'tier': 'Medium',
         'height': (58, '2d10'),
@@ -456,7 +456,7 @@ data['Hobgoblin'] = {
         'Constitution': 2,
         'Intelligence': 1
     },
-    'lifespan': 100,
+    'lifespan': '100',
     'size': {
         'tier': 'Medium',
         'height': (56, '2d10'),
@@ -479,7 +479,7 @@ data['Human'] = {
         'Wisdom': 1,
         'Charisma': 1
     },
-    'lifespan': 100,
+    'lifespan': '100',
     'size': {
         'tier': 'Medium',
         'height': (56, '2d10'),
@@ -506,7 +506,7 @@ data['Kenku'] = {
         'Dexterity': 2,
         'Wisdom': 1
     },
-    'lifespan': 60,
+    'lifespan': '60',
     'size': {
         'tier': 'Medium',
         'height': (52, '2d8'),
@@ -525,7 +525,7 @@ data['Kobold'] = {
         'Strength': 2,
         'Dexterity': 2
     },
-    'lifespan': 120,
+    'lifespan': '120',
     'size': {
         'tier': 'Small',
         'height': (25, '2d4'),
@@ -544,7 +544,7 @@ data['Lizardfolk'] = {
         'Constitution': 2,
         'Wisdom': 1
     },
-    'lifespan': 60,
+    'lifespan': '60',
     'size': {
         'tier': 'Medium',
         'height': (57, '2d10'),
@@ -564,7 +564,7 @@ data['Orc'] = {
         'Constitution': 1,
         'Intelligence': 2
     },
-    'lifespan': 50,
+    'lifespan': '50',
     'size': {
         'tier': 'Medium',
         'height': (52, '2d8'),
@@ -583,7 +583,7 @@ data['Tabaxi'] = {
         'Dexterity': 2,
         'Charisma': 1
     },
-    'lifespan': 100,
+    'lifespan': '100',
     'size': {
         'tier': 'Medium',
         'height': (58, '2d10'),
@@ -599,7 +599,7 @@ data['Tabaxi'] = {
 
 data['Tiefling'] = {
     'base_ab_mod': {},
-    'lifespan': 105,  # Fabricated, PHB says 'human-like... few [more]'
+    'lifespan': '105',  # Fabricated, PHB: 'human-like... few [more]'
     'size': {
         'tier': 'Medium',
         'height': (56, '2d10'),
@@ -692,8 +692,8 @@ data['Tortle'] = {
     'lifespan': 50,
     'size': {
         'tier': 'Medium',
-        'height': (60, '2d6'),   # Fabricated, ToA says '5 to 6'
-        'weight': (430, '2d20')  # Fabricated, ToA says 'average 450'
+        'height': (60, '2d6'),   # Fabricated, ToA: '5 to 6'
+        'weight': (430, '2d20')  # Fabricated, ToA: 'average 450'
     },
     'speed': {
         'standard': 30,
@@ -709,7 +709,7 @@ data['Triton'] = {
         'Constitution': 1,
         'Charisma': 1
     },
-    'lifespan': 200,
+    'lifespan': '200',
     'size': {
         'tier': 'Medium',
         'height': (54, '2d10'),
@@ -728,7 +728,7 @@ data['Yuan-Ti Pureblood'] = {
         'Intelligence': 1,
         'Charisma': 2
     },
-    'lifespan': 100,
+    'lifespan': '100',
     'size': {
         'tier': 'Medium',
         'height': (56, '2d10'),
