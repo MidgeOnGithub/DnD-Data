@@ -133,7 +133,7 @@ data['Elf'] = {
         'swimming': None
     },
     'size': {
-        'tier:' 'Medium'
+        'tier': 'Medium'
     },
     'subrace': {
         'Drow': {
