@@ -1,9 +1,34 @@
-# Opting to separately declare and append values to data like a dict
-# over initializing the whole object in one long super-brace
-data = {}
+# Opting to separately declare and append values to data like a list
+# instead of initializing the whole object in one confusing super-brace
+data = []
 
-data['Aasimar'] = {
-    'base_ab_mod': {
+data.append({
+    'race': 'Aarakocra',
+    'source': 'EE',
+    'adventure_league': False,
+    'base_ability_modifier': {
+        'Dexterity': 2,
+        'Wisdom': 1
+    },
+    'lifespan': '30',
+    'size': {
+        'tier': 'Medium',
+        'height': (57, '2d2'),  # Fabricated, EE: 'about 5 feet'
+        'weight': (76, '2d3')   # Fabricated, EE: 'between 80 and 100'
+    },
+    'speed': {
+        'standard': 25,
+        'climbing': None,
+        'flying': 50,
+        'swimming': None
+    }
+})
+
+data.append({
+    'race': 'Aasimar',
+    'source': 'VOLO',
+    'adventure_league': True,
+    'base_ability_modifier': {
         'Charisma': 2
     },
     'lifespan': '160',
@@ -20,25 +45,28 @@ data['Aasimar'] = {
     },
     'subrace': {
         'Fallen': {
-            'ab_mod': {
+            'ability_modifier': {
                 'Strength': 1
             }
         },
         'Protector': {
-            'ab_mod': {
+            'ability_modifier': {
                 'Wisdom': 1
             }
         },
         'Scourge': {
-            'ab_mod': {
+            'ability_modifier': {
                 'Constitution': 1
             }
         },
     }
-}
+})
 
-data['Bugbear'] = {
-    'base_ab_mod': {
+data.append({
+    'race': 'Bugbear',
+    'source': 'VOLO',
+    'adventure_league': True,
+    'base_ability_modifier': {
         'Strength': 2,
         'Dexterity': 1
     },
@@ -54,10 +82,13 @@ data['Bugbear'] = {
         'flying': None,
         'swimming': None
     }
-}
+})
 
-data['Dragonborn'] = {
-    'base_ab_mod': {
+data.append({
+    'race': 'Dragonborn',
+    'source': 'PHB',
+    'adventure_league': True,
+    'base_ability_modifier': {
         'Strength': 2,
         'Charisma': 1
     },
@@ -73,10 +104,13 @@ data['Dragonborn'] = {
         'flying': None,
         'swimming': None
     }
-}
+})
 
-data['Dwarf'] = {
-    'base_ab_mod': {
+data.append({
+    'race': 'Dwarf',
+    'source': 'PHB',
+    'adventure_league': True,
+    'base_ability_modifier': {
         'Constitution': 2
     },
     'lifespan': '350',
@@ -91,16 +125,17 @@ data['Dwarf'] = {
     },
     'subrace': {
         'Duergar': {
-            'ab_mod': {
+            'source': 'SCAG',
+            'ability_modifier': {
                 'Strength': 1
             },
             'size': {
                 'height': (48, '2d6'),   # Fabricated, PHB: 'between' 4-5
-                'weight': (140, '2d10')  # Fabricated, PHB: 'around' 150
+                'weight': (140, '2d4')   # Fabricated, PHB: 'around' 150
             }
         },
         'Hill': {
-            'ab_mod': {
+            'ability_modifier': {
                 'Wisdom': 1
             },
             'size': {
@@ -109,7 +144,7 @@ data['Dwarf'] = {
             }
         },
         'Mountain': {
-            'ab_mod': {
+            'ability_modifier': {
                 'Strength': 2
             },
             'size': {
@@ -118,10 +153,13 @@ data['Dwarf'] = {
             }
         }
     }
-}
+})
 
-data['Elf'] = {
-    'base_ab_mod': {
+data.append({
+    'race': 'Elf',
+    'source': 'PHB',
+    'adventure_league': True,
+    'base_ability_modifier': {
         'Dexterity': 2
     },
     'lifespan': '750',
@@ -136,7 +174,7 @@ data['Elf'] = {
     },
     'subrace': {
         'Drow': {
-            'ab_mod': {
+            'ability_modifier': {
                 'Charisma': 1
             },
             'size': {
@@ -145,7 +183,8 @@ data['Elf'] = {
             }
         },
         'Eladrin': {
-            'ab_mod': {
+            'source': 'MTOF',
+            'ability_modifier': {
                 'Charisma': 1
             },
             'size': {
@@ -154,7 +193,7 @@ data['Elf'] = {
             }
         },
         'High': {
-            'ab_mod': {
+            'ability_modifier': {
                 'Intelligence': 1
             },
             'size': {
@@ -163,7 +202,8 @@ data['Elf'] = {
             }
         },
         'Sea': {
-            'ab_mod': {
+            'source': 'MTOF',
+            'ability_modifier': {
                 'Constitution': 1
             },
             'size': {
@@ -175,7 +215,8 @@ data['Elf'] = {
             }
         },
         'Shadar-Kai': {
-            'ab_mod': {
+            'source': 'MTOF',
+            'ability_modifier': {
                 'Constitution': 1
             },
             'size': {
@@ -184,7 +225,7 @@ data['Elf'] = {
             }
         },
         'Wood': {
-            'ab_mod': {
+            'ability_modifier': {
                 'Wisdom': 1
             },
             'size': {
@@ -196,10 +237,13 @@ data['Elf'] = {
             }
         }
     }
-}
+})
 
-data['Firbolg'] = {
-    'base_ab_mod': {
+data.append({
+    'race': 'Firbolg',
+    'source': 'VOLO',
+    'adventure_league': True,
+    'base_ability_modifier': {
         'Strength': 1,
         'Wisdom': 2
     },
@@ -215,10 +259,13 @@ data['Firbolg'] = {
         'flying': None,
         'swimming': None
     }
-}
+})
 
-data['Genasi'] = {
-    'base_ab_mod': {
+data.append({
+    'race': 'Genasi',
+    'source': 'EE',
+    'adventure_league': True,
+    'base_ability_modifier': {
         'Constitution': 2
     },
     'lifespan': '120',
@@ -235,22 +282,22 @@ data['Genasi'] = {
     },
     'subrace': {
         'Air': {
-            'ab_mod': {
+            'ability_modifier': {
                 'Dexterity': 1
             }
         },
         'Earth': {
-            'ab_mod': {
+            'ability_modifier': {
                 'Strength': 1
             }
         },
         'Fire': {
-            'ab_mod': {
+            'ability_modifier': {
                 'Intelligence': 1
             }
         },
         'Water': {
-            'ab_mod': {
+            'ability_modifier': {
                 'Wisdom': 1
             },
             'speed': {
@@ -258,10 +305,13 @@ data['Genasi'] = {
             }
         }
     }
-}
+})
 
-data['Gith'] = {
-    'base_ab_mod': {
+data.append({
+    'race': 'Gith',
+    'source': 'MToF',
+    'adventure_league': True,
+    'base_ability_modifier': {
         'Intelligence': 1
     },
     'lifespan': '120',
@@ -276,7 +326,7 @@ data['Gith'] = {
     },
     'subrace': {
         'Githyanki': {
-            'ab_mod': {
+            'ability_modifier': {
                 'Strength': 2
             },
             'size': {
@@ -285,7 +335,7 @@ data['Gith'] = {
             }
         },
         'Githzerai': {
-            'ab_mod': {
+            'ability_modifier': {
                 'Wisdom': 2
             },
             'size': {
@@ -294,10 +344,13 @@ data['Gith'] = {
             }
         }
     }
-}
+})
 
-data['Gnome'] = {
-    'base_ab_mod': {
+data.append({
+    'race': 'Gnome',
+    'source': 'PHB',
+    'adventure_league': True,
+    'base_ability_modifier': {
         'Intelligence': 2
     },
     'lifespan': '350:500',
@@ -313,27 +366,36 @@ data['Gnome'] = {
         'swimming': None
     },
     'subrace': {
-        'Deep': {
-            'ab_mod': {
+        'Svirfneblin': {
+            'source': 'EE',
+            'ability_modifier': {
                 'Dexterity': 1
             },
-            'lifespan': '200:250'
+            'lifespan': '200:250',
+            'size': {
+                'tier': 'Small',
+                'height': (35, '2d2'),  # Fabricated, EE: 'about 3 to 3 1/2 feet'
+                'weight': (82, '1d8')   # Fabricated, EE: 'about 80 to 120'
+            },
         },
         'Forest': {
-            'ab_mod': {
+            'ability_modifier': {
                 'Dexterity': 1
             }
         },
         'Rock': {
-            'ab_mod': {
+            'ability_modifier': {
                 'Constitution': 1
             }
         }
     }
-}
+})
 
-data['Goblin'] = {
-    'base_ab_mod': {
+data.append({
+    'race': 'Goblin',
+    'source': 'VOLO',
+    'adventure_league': True,
+    'base_ability_modifier': {
         'Dexterity': 2,
         'Constitution': 1
     },
@@ -349,10 +411,35 @@ data['Goblin'] = {
         'flying': None,
         'swimming': None
     }
-}
+})
 
-data['Half-Elf'] = {
-    'base_ab_mod': {
+data.append({
+    'race': 'Goliath',
+    'source': 'VOLO',
+    'adventure_league': True,
+    'base_ability_modifier': {
+        'Strength': 2,
+        'Constitution': 1
+    },
+    'lifespan': '100',
+    'size': {
+        'tier': 'Medium',
+        'height': (74, '2d10'),
+        'weight': (200, '2d6')
+    },
+    'speed': {
+        'standard': 30,
+        'climbing': None,
+        'flying': None,
+        'swimming': None
+    }
+})
+
+data.append({
+    'race': 'Half-Elf',
+        'source': 'PHB',
+    'adventure_league': True,
+    'base_ability_modifier': {
         'Charisma': 2,
         'Choice1': 1,
         'Choice2': 1
@@ -360,7 +447,7 @@ data['Half-Elf'] = {
     'lifespan': '180',
     'size': {
         'tier': 'Medium',
-        'height': (56, '2d10'),
+        'height': (57, '2d8'),
         'weight': (110, '2d4')
     },
     'speed': {
@@ -371,21 +458,28 @@ data['Half-Elf'] = {
     },
     'variant': {
         'Aquatic Elf Heritage': {
+            'source': 'SCAG',
             'speed': {
                 'swimming': 30
             }
         },
         'Drow Heritage': {
+            'source': 'SCAG'
         },
         'High Elf Heritage': {
+            'source': 'SCAG'
         },
         'Wood Elf Heritage': {
+            'source': 'SCAG'
         }
     }
-}
+})
 
-data['Half-Orc'] = {
-    'base_ab_mod': {
+data.append({
+    'race': 'Half-Orc',
+    'source': 'PHB',
+    'adventure_league': True,
+    'base_ability_modifier': {
         'Strength': 2,
         'Constitution': 1
     },
@@ -401,23 +495,13 @@ data['Half-Orc'] = {
         'flying': None,
         'swimming': None
     },
-    'variant': {
-        'Aquatic Elf Heritage': {
-            'speed': {
-                'swimming': 30
-            }
-        },
-        'Drow Heritage': {
-        },
-        'High Elf Heritage': {
-        },
-        'Wood Elf Heritage': {
-        }
-    }
-}
+})
 
-data['Halfling'] = {
-    'base_ab_mod': {
+data.append({
+    'race': 'Halfling',
+    'source': 'PHB',
+    'adventure_league': True,
+    'base_ability_modifier': {
         'Dexterity': 2
     },
     'lifespan': '150',
@@ -434,25 +518,29 @@ data['Halfling'] = {
     },
     'subrace': {
         'Ghostwise': {
-            'ab_mod': {
+            'source': 'SCAG',
+            'ability_modifier': {
                 'Wisdom': 1
             }
         },
         'Lightfoot': {
-            'ab_mod': {
+            'ability_modifier': {
                 'Charisma': 1
             }
         },
         'Stout': {
-            'ab_mod': {
+            'ability_modifier': {
                 'Constitution': 1
             }
         }
     }
-}
+})
 
-data['Hobgoblin'] = {
-    'base_ab_mod': {
+data.append({
+    'race': 'Hobgoblin',
+    'source': 'VOLO',
+    'adventure_league': True,
+    'base_ability_modifier': {
         'Constitution': 2,
         'Intelligence': 1
     },
@@ -468,10 +556,13 @@ data['Hobgoblin'] = {
         'flying': None,
         'swimming': None
     }
-}
+})
 
-data['Human'] = {
-    'base_ab_mod': {
+data.append({
+    'race': 'Human',
+    'source': 'PHB',
+    'adventure_league': True,
+    'base_ability_modifier': {
         'Strength': 1,
         'Dexterity': 1,
         'Constitution': 1,
@@ -493,16 +584,19 @@ data['Human'] = {
     },
     'variant': {
         'Variant': {
-            'ab_mod': {
+            'ability_modifier': {
                 'Choice1': 1,
                 'Choice2': 1
             }
         }
     }
-}
+})
 
-data['Kenku'] = {
-    'base_ab_mod': {
+data.append({
+    'race': 'Kenku',
+    'source': 'VOLO',
+    'adventure_league': True,
+    'base_ability_modifier': {
         'Dexterity': 2,
         'Wisdom': 1
     },
@@ -518,10 +612,13 @@ data['Kenku'] = {
         'flying': None,
         'swimming': None
     }
-}
+})
 
-data['Kobold'] = {
-    'base_ab_mod': {
+data.append({
+    'race': 'Kobold',
+    'source': 'VOLO',
+    'adventure_league': True,
+    'base_ability_modifier': {
         'Strength': 2,
         'Dexterity': 2
     },
@@ -537,10 +634,13 @@ data['Kobold'] = {
         'flying': None,
         'swimming': None
     },
-}
+})
 
-data['Lizardfolk'] = {
-    'base_ab_mod': {
+data.append({
+    'race': 'Lizardfolk',
+    'source': 'VOLO',
+    'adventure_league': True,
+    'base_ability_modifier': {
         'Constitution': 2,
         'Wisdom': 1
     },
@@ -556,10 +656,13 @@ data['Lizardfolk'] = {
         'flying': None,
         'swimming': 30
     },
-}
+})
 
-data['Orc'] = {
-    'base_ab_mod': {
+data.append({
+    'race': 'Orc',
+    'source': 'VOLO',
+    'adventure_league': True,
+    'base_ability_modifier': {
         'Strength': 2,
         'Constitution': 1,
         'Intelligence': 2
@@ -576,10 +679,13 @@ data['Orc'] = {
         'flying': None,
         'swimming': None
     },
-}
+})
 
-data['Tabaxi'] = {
-    'base_ab_mod': {
+data.append({
+    'race': 'Tabaxi',
+    'source': 'VOLO',
+    'adventure_league': True,
+    'base_ability_modifier': {
         'Dexterity': 2,
         'Charisma': 1
     },
@@ -595,10 +701,13 @@ data['Tabaxi'] = {
         'flying': None,
         'swimming': None
     },
-}
+})
 
-data['Tiefling'] = {
-    'base_ab_mod': {},
+data.append({
+    'race': 'Tiefling',
+    'source': 'PHB',
+    'adventure_league': True,
+    'base_ability_modifier': {},
     'lifespan': '105',  # Fabricated, PHB: 'human-like... few [more]'
     'size': {
         'tier': 'Medium',
@@ -613,55 +722,63 @@ data['Tiefling'] = {
     },
     'subrace': {
         'Asmodeus': {
-            'ab_mod': {
+            'ability_modifier': {
                 'Intelligence': 1,
                 'Charisma': 2
             }
         },
         'Baalzebul': {
-            'ab_mod': {
+            'source': 'MToF',
+            'ability_modifier': {
                 'Intelligence': 1,
                 'Charisma': 2
             }
         },
         'Dispater': {
-            'ab_mod': {
+            'source': 'MToF',
+            'ability_modifier': {
                 'Dexterity': 1,
                 'Charisma': 2
             }
         },
         'Fierna': {
-            'ab_mod': {
+            'source': 'MToF',
+            'ability_modifier': {
                 'Wisdom': 1,
                 'Charisma': 2
             }
         },
         'Glasya': {
-            'ab_mod': {
+            'source': 'MToF',
+            'ability_modifier': {
                 'Dexterity': 1,
                 'Charisma': 2
             }
         },
         'Levistus': {
-            'ab_mod': {
+            'source': 'MToF',
+            'ability_modifier': {
                 'Constitution': 1,
                 'Charisma': 2
             }
         },
         'Mammon': {
-            'ab_mod': {
+            'source': 'MToF',
+            'ability_modifier': {
                 'Intelligence': 1,
                 'Charisma': 2
             }
         },
         'Mephistopheles': {
-            'ab_mod': {
+            'source': 'MToF',
+            'ability_modifier': {
                 'Intelligence': 1,
                 'Charisma': 2
             }
         },
         'Zariel': {
-            'ab_mod': {
+            'source': 'MToF',
+            'ability_modifier': {
                 'Strength': 1,
                 'Charisma': 2
             }
@@ -669,7 +786,8 @@ data['Tiefling'] = {
     },
     'variant1': {
         'Feral': {
-            'ab_mod': {
+            'source': 'SCAG',
+            'ability_modifier': {
                 'Dexterity': 2,
                 'Intelligence': 1
             }
@@ -677,15 +795,21 @@ data['Tiefling'] = {
     },
     'variant2': {
         'Winged': {
+            'source': 'SCAG',
+            'adventure_league': False,
             'speed': {
                 'flying': 30
             }
         }
     }
-}
+})
 
-data['Tortle'] = {
-    'base_ab_mod': {
+data.append({
+    'race': 'Tortle',
+    'source': 'MToF+',
+    'adventure_league': True,
+    'adventure_league_source': 'XGE',
+    'base_ability_modifier': {
         'Strength': 2,
         'Wisdom': 1
     },
@@ -693,7 +817,7 @@ data['Tortle'] = {
     'size': {
         'tier': 'Medium',
         'height': (60, '2d6'),   # Fabricated, ToA: '5 to 6'
-        'weight': (430, '2d20')  # Fabricated, ToA: 'average 450'
+        'weight': (400, '2d8')   # Fabricated, ToA: 'average 450'
     },
     'speed': {
         'standard': 30,
@@ -701,10 +825,13 @@ data['Tortle'] = {
         'flying': None,
         'swimming': None
     },
-}
+})
 
-data['Triton'] = {
-    'base_ab_mod': {
+data.append({
+    'race': 'Triton',
+    'source': 'VOLO',
+    'adventure_league': True,
+    'base_ability_modifier': {
         'Strength': 1,
         'Constitution': 1,
         'Charisma': 1
@@ -721,10 +848,13 @@ data['Triton'] = {
         'flying': None,
         'swimming': 30
     },
-}
+})
 
-data['Yuan-Ti Pureblood'] = {
-    'base_ab_mod': {
+data.append({
+    'race': 'Yuan-Ti Pureblood',
+    'source': 'VOLO',
+    'adventure_league': True,
+    'base_ability_modifier': {
         'Intelligence': 1,
         'Charisma': 2
     },
@@ -740,4 +870,4 @@ data['Yuan-Ti Pureblood'] = {
         'flying': None,
         'swimming': 30
     },
-}
+})
