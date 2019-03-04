@@ -1,16 +1,20 @@
+## DnD Data
+A simple set of Python scripts and resulting JSON string files with data related to DnD.
+More specifically, data regarding official 5th Edition Wizards of the Coast publications (excluding experimental "Unearthed Arcana").
+Intended for use in a programs which load in said JSON strings, then extract or pretty-print entries within them.
+
 ### Disclaimer
-This program is not intended to represent an official Dungeons and Dragons nor Wizards of the Coast product. All product and company names are trademarks™ or registered® trademarks of their respective holders. Use of them does not imply any affiliation with or endorsement by them.
-
-A simple set of Python scripts and resulting JSON files with data related to DnD. More specifically, regarding official 5th Edition Wizards of the Coast publications (excluding experimental "Unearthed Arcana") Intended for use in a program which loads in said JSONs, then stores or pretty-prints entries within them.
-
+The contents of this repo are not intended to represent an official *Dungeons and Dragons* nor *Wizards of the Coast* product.
+All product and company names are trademarks™ or registered trademarks® of their respective holders.
+Use of them does not imply any affiliation with nor endorsement by them.
 
 ### Race
-Each entry in the `races` file is structured such that the "base" dictionary [a playable race] contains values that may be overwritten or modified by "sub" dictionaries `subraces` within them.
-> A subrace *must* be chosen: `Sea Elf` is a proper race choice, `Elf` is not.
+Each entry in the `races` file is structured such that the "base" object [a playable race] contains values that may be overwritten or modified by "sub" dictionaries `subraces` within them.
+> If provided, subraces *must* be chosen: `Sea Elf` is a proper race choice, `Elf` is not.
 
-Every race possible should contain the following entries
+Every complete race should contain the following entries
 (assuming, per above, a subrace adds or overwrites values from the "base" race):
-> * Race's Name
+> * Race Name
 >   * Subrace string should be placed before "base" race to create the full name when printing
 > * Ability Modifiers
 > * Lifespan
